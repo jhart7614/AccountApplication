@@ -3,7 +3,7 @@ import java.util.HashMap;
 
 public class Service {
 	
-	private static HashMap<Integer, Account> accountlist = new HashMap<Integer, Account>();
+	static HashMap<Integer, Account> accountlist = new HashMap<Integer, Account>();
 
 	public static void addAccount(int key, Account Account) {
 
