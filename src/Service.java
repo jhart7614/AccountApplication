@@ -1,28 +1,44 @@
-import java.util.ArrayList;
 import java.util.HashMap;
 
 public class Service {
 	
-	static HashMap<Integer, Account> accountlist = new HashMap<Integer, Account>();
+	HashMap<Integer, Account> accountList = new HashMap<Integer, Account>();
+	
+	private int count = 0; 
 
-	public static void addAccount(int key, Account Account) {
+	public void addAccount(Account account) {
 
-		accountlist.put(key, Account);
-
+		accountList.put(account.getAccountNumber(), account);
+		
+		count = count + 1;
 	}
 
-	public static HashMap<Integer, Account> getList() {
+    public int getCount() {
+    	
+    return count;	
+    
+    }
+	
+	
+	public void removeAccount(Account account) {
+		
+		accountList.remove(account);
+		count = count - 1;
+	}
 
-		return accountlist;
+	public HashMap<Integer, Account> getList() {
+
+		return accountList;
 	}
 	
-	public static String RetrieveFromMap(int Key) {
+	public String RetrieveFromMap(int number) {
 
-		return "First Name: " + accountlist.get(Key).getFirstName() + " Last Name: " + accountlist.get(Key).getLastName() + " Account Number: " + accountlist.get(Key).getAccountNumber();
+		return "First Name: " + accountList.get(number).getFirstName() + " Last Name: " + accountList.get(number).getLastName() + " Account Number: " + accountList.get(number).getAccountNumber();
+		
 	}
-
-	public static void setAccountlist(HashMap<Integer, Account> accountlist) {
-		Service.accountlist = accountlist;
+	
+	public Account retrieveFromMap(int number) {
+		return accountList.get(number);
 	}
 
 }
