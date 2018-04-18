@@ -2,7 +2,7 @@ import java.util.HashMap;
 
 public class Service {
 	
-	HashMap<Integer, Account> accountList = new HashMap<Integer, Account>();
+	static HashMap<Integer, Account> accountList = new HashMap<Integer, Account>();
 	
 	private int count = 0; 
 
@@ -18,7 +18,6 @@ public class Service {
     return count;	
     
     }
-	
 	
 	public void removeAccount(Account account) {
 		
