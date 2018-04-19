@@ -1,9 +1,9 @@
 
 public class Account {
 	
-	private static String firstName;
-	private static String lastName;
-	private static int AccountNumber;
+	private String firstName;
+	private String lastName;
+	private int AccountNumber;
 	
 	public Account(String firstName, String lastName, int AccountNumber ) {
 		
@@ -12,7 +12,7 @@ public class Account {
 		this.AccountNumber = AccountNumber;
 	}
 
-	public static String getFirstName() {
+	public String getFirstName() {
 		return firstName;
 	}
 
@@ -20,7 +20,7 @@ public class Account {
 		this.firstName = firstName;
 	}
 
-	public static String getLastName() {
+	public String getLastName() {
 		return lastName;
 	}
 
@@ -28,7 +28,7 @@ public class Account {
 		this.lastName = lastName;
 	}
 
-	public static int getAccountNumber() {
+	public int getAccountNumber() {
 		return AccountNumber;
 	}
 
