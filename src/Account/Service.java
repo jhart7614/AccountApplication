@@ -1,9 +1,10 @@
 package Account;
 import java.util.HashMap;
+import java.util.Map;
 
 public class Service {
 	
-	private static HashMap<Integer, Account> accountList = new HashMap<Integer, Account>();
+	static HashMap<Integer, Account> accountList = new HashMap<Integer, Account>();
 	
 	private int count = 0; 
 
@@ -19,7 +20,7 @@ public class Service {
     return count;	
     
     }
-	
+    
 	public void removeAccount(Account account) {
 		
 		accountList.remove(account);
