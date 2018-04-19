@@ -1,8 +1,9 @@
+package Account;
 import java.util.HashMap;
 
 public class Service {
 	
-	static HashMap<Integer, Account> accountList = new HashMap<Integer, Account>();
+	private static HashMap<Integer, Account> accountList = new HashMap<Integer, Account>();
 	
 	private int count = 0; 
 

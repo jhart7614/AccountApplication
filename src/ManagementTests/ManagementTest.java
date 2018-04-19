@@ -1,3 +1,5 @@
+package ManagementTests;
+import Account.*;
 
 import static org.junit.Assert.*;
 
@@ -5,6 +7,10 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import com.google.gson. *;
+
+import Account.Account;
+import Account.JSon;
+import Account.Service;
 
 public class ManagementTest {
 	
@@ -19,7 +25,7 @@ public class ManagementTest {
 		
 		service.addAccount(AC2);
 	
-		assertEquals( AC2, service.accountList.get(3333));
+		assertEquals( AC2, service.getList().get(3333));
 	}
 	
 	@Test
@@ -44,7 +50,7 @@ public class ManagementTest {
 	service.addAccount(AC1);
 	String expected = "{\"2222\":{\"firstName\":\"John\",\"lastName\":\"Smith\",\"AccountNumber\":2222}";
 	JSon util = new JSon();
-	String Test = util.makeJSon(service.accountList);
+	String Test = util.makeJSon(service.getList());
 	assertEquals(Test, expected);
 
 }

@@ -1,3 +1,4 @@
+package Account;
 
 
 public class AccountManagement {
@@ -12,7 +13,7 @@ public class AccountManagement {
 		services.addAccount(AC1);
 		
 		JSon util = new JSon();
-		String json = util.makeJSon(services.accountList);
+		String json = util.makeJSon(services.getList());
 		System.out.println(json);
 	   
 	}
