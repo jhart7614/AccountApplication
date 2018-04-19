@@ -1,13 +1,7 @@
 package ManagementTests;
-import Account.*;
-
 import static org.junit.Assert.*;
 
-import org.junit.Assert;
-import org.junit.Before;
 import org.junit.Test;
-import com.google.gson. *;
-
 import Account.Account;
 import Account.JSon;
 import Account.Service;

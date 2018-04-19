@@ -1,10 +1,6 @@
 package ManagementTests;
 import Account.*;
 
-import static org.junit.Assert.*;
-
-import java.util.HashMap;
-
 import org.junit.Assert;
 
 import org.junit.Test;
